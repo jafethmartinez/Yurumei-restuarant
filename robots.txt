@@ -1,0 +1,5 @@
+# Yurumei Sport Bar & Restaurant — everything here is meant to be found.
+User-agent: *
+Allow: /
+
+Sitemap: https://jafethmartinez.github.io/Yurumei-restuarant/sitemap.xml

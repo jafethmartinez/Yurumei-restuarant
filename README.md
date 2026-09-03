@@ -80,6 +80,8 @@ The site is plain HTML, so almost any host works. The simplest is **GitHub Pages
 
 To use a custom domain (say `yurumei.com`), add a file called `CNAME` at the top
 level containing just the domain, then point the domain's DNS at GitHub Pages.
+If you do, also swap the domain inside `sitemap.xml` and `robots.txt` — they name
+the github.io address today.
 
 The `.nojekyll` file is already here — it stops GitHub from trying to process the
 site as a blog.
