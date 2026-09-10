@@ -1,105 +1,158 @@
-# Yurumei Sport Bar & Restaurant — website
+# Yurumei Sport Bar & Restaurant — sitio web
 
-A static website for the family restaurant in **Punta Gorda, Roatán** — the oldest
-Garífuna settlement in Honduras.
+Sitio web del restaurante de la familia en **Punta Gorda, Roatán** — el pueblo
+garífuna más antiguo de Honduras.
 
-No build step, no dependencies, no server. Open `index.html` in a browser and it works.
+Sin compilar, sin dependencias, sin servidor. Abre `index.html` en un navegador
+y funciona.
+
+**El sitio abre en español.** Cada visitante puede cambiar a inglés con el botón
+del encabezado, y su elección se recuerda mientras navega.
 
 ---
 
-## Pages
+## Las páginas
 
-| File | What it is |
+| Archivo | Qué es |
 |---|---|
-| `index.html`   | Home — the hook, what the place is, signature dishes, the collection, guifiti, cruise-day note |
-| `menu.html`    | Full menu, in three sections: from the sea, from the kitchen, from the bar |
-| `about.html`   | Our story — Yurumein, 1797, the family, the museum, photos and video |
-| `visit.html`   | Hours, address, map, drive times from every port, and the FAQ |
-| `contact.html` | Table request form that sends by WhatsApp or email |
-| `404.html`     | Not-found page |
+| `index.html`   | Inicio — el gancho, qué es el lugar, los platos de la casa, la colección, el guifiti, la nota para cruceros |
+| `menu.html`    | El menú completo: del mar, de la cocina, del bar |
+| `about.html`   | Nuestra historia — Yurumein, 1797, la familia, el museo, fotos y videos |
+| `visit.html`   | Horarios, dirección, mapa, cuánto se hace desde cada puerto, y las preguntas frecuentes |
+| `contact.html` | Formulario para pedir mesa, que se envía por WhatsApp o correo |
+| `404.html`     | Página de error |
 
 ---
 
-## ✏️ What still needs you
+## ✏️ Lo que todavía te toca a ti
 
-Everything the site says lives in **one file**: `assets/js/data.js`.
-Open it, edit the text, save, refresh the page. You never need to touch the HTML.
+Todo lo que dice el sitio está en **un solo archivo**: `assets/js/data.js`.
+Ábrelo, edita el texto, guarda y recarga la página. Nunca hace falta tocar HTML.
 
-These are the items in there that are still guesses or placeholders:
+Cada texto tiene las dos versiones, así:
 
-1. **The phone and WhatsApp number.** They are currently Jafeth's number from
-   Martinez East End Tours. Put the restaurant's own number in `SITE.whatsapp`
-   (digits only, no `+` and no spaces) and `SITE.phone`.
-2. **The opening hours.** `HOURS` is a guess — 11am to 9pm, later on weekends.
-   Correct every line. For a day you are closed, set `open` and `close` to `""`.
-3. **The prices.** Every price in `MENU` is a placeholder. Until you set
-   `PRICES_CONFIRMED = true`, the site shows *"Ask for today's price"* instead of a
-   number — so no guest is ever quoted a figure you did not set. Go through the
-   menu, fix the prices, then flip that one line to `true`.
-4. **The menu itself.** The dishes are the Garífuna plates the family is known for,
-   led by the ones guests already name in reviews — machuca, machuca with king crab,
-   sopa marinera. Delete anything you don't serve and add anything missing.
-5. **The map pin.** `MAP` is set to the middle of Punta Gorda. To put it on your
-   door: open Google Maps, right-click the restaurant, click the numbers that pop up
-   to copy them, and paste them in as `lat` and `lon`.
-6. **Two FAQ answers.** Near the bottom of `data.js`, two questions are commented
-   out — *do you take cards?* and *do you show the games?* Write the real answers,
-   delete the `//` in front of those lines, and they appear on the Visit page.
-7. **The Facebook page.** There are two pages under the Yurumei name. The site links
-   to `…100042338990474`; if you post to the other one, swap the link.
+```js
+title: { es: "Cocinado a la manera garífuna", en: "Cooked the Garífuna way" }
+```
 
-Details already confirmed from your Tripadvisor listing: the name, the address on
-Calle Principal in Barrio La Cola, the cuisine, the 4.6 rating, and the Instagram
-account `@yurumei.ysbr`.
+**Cambia siempre las dos.** Lo que está en `es:` sale en español y lo que está
+en `en:` sale en inglés.
+
+Estas son las cosas que siguen siendo suposiciones o ejemplos:
+
+1. **El teléfono y el WhatsApp.** Ahora mismo es el número de Jafeth, de
+   Martinez East End Tours. Pon el número del restaurante en `SITE.whatsapp`
+   (solo números, sin `+` y sin espacios) y en `SITE.phone`.
+2. **El horario.** `HOURS` es una suposición — de 11 de la mañana a 9 de la
+   noche, más tarde los fines de semana. Corrige cada línea. Para un día
+   cerrado, pon `open` y `close` en `""`.
+3. **Los precios.** Todos son de ejemplo. Mientras `PRICES_CONFIRMED` esté en
+   `false`, el menú dice *"Pregunta el precio de hoy"* en lugar de un número,
+   para que nadie reciba un precio que tú no pusiste. Revisa el menú, corrige
+   los precios, y recién entonces pon esa línea en `true`.
+4. **El menú.** Los platos son los que la familia cocina, empezando por los que
+   la gente ya nombra en sus reseñas: machuca, machuca con king crab y sopa
+   marinera. Borra lo que no vendas y agrega lo que falte.
+5. **El punto del mapa.** `MAP` está en el centro de Punta Gorda. Para ponerlo
+   en la puerta: abre Google Maps, mantén presionado sobre el restaurante, copia
+   los números que salen y pégalos como `lat` y `lon`.
+6. **Dos respuestas.** Al final de `data.js` hay dos preguntas apagadas —
+   *¿aceptan tarjeta?* y *¿pasan los partidos?* Escribe las respuestas de
+   verdad, quita las `//` del principio de esas líneas, y aparecen en la página
+   "Visítanos".
+7. **El Facebook.** Hay dos páginas con el nombre Yurumei. El sitio enlaza a
+   `…990474`; si tú publicas en la otra, cambia el enlace.
+
+Datos ya confirmados del perfil de Tripadvisor: el nombre, la dirección en la
+Calle Principal del Barrio La Cola, la cocina, la calificación 4.6 y la cuenta
+de Instagram `@yurumei.ysbr`.
 
 ---
 
-## Adding a photo
+## El idioma
 
-1. Drop the file in `assets/img/`.
-2. Add a line to `GALLERY` in `assets/js/data.js`:
+- El sitio abre en **español** para todo el mundo.
+- El botón **EN / ES** del encabezado cambia el idioma sin recargar la página.
+- La elección se guarda en el navegador del visitante y lo sigue de una página
+  a otra.
+- Si prefieres que el sitio abra en el idioma del navegador de cada visitante
+  (inglés para la mayoría de los cruceros), pon `AUTO_DETECT_LANG = true` en
+  `data.js`. La elección manual del visitante siempre manda por encima.
+- Para cambiar el idioma con el que abre por defecto, cambia `DEFAULT_LANG`.
+
+El texto fijo de las páginas lleva su traducción al lado, dentro del HTML:
+
+```html
+<h2 data-en="The menu">El menú</h2>
+```
+
+El español es lo que está escrito, y el inglés va en `data-en`. Si editas uno,
+edita el otro.
+
+---
+
+## Agregar una foto
+
+1. Pon el archivo en `assets/img/`.
+2. Agrega una línea a `GALLERY` en `assets/js/data.js`:
    ```js
-   { file: "my-new-photo.jpg", caption: "What the photo shows." },
+   { file: "mi-foto.jpg", caption: { es: "Qué se ve.", en: "What it shows." } },
    ```
 
-Photos from the Punta Gorda cultural tour are shared with the
-[Martinez East End Tours](https://martinezeastendtours.com) site — same family,
-same village.
+Las fotos del pueblo y del restaurante son las mismas del sitio de
+[Martinez East End Tours](https://martinezeastendtours.com) — misma familia,
+mismo pueblo.
 
 ---
 
-## Putting it online
+## Ponerlo en línea
 
-The site is plain HTML, so almost any host works. The simplest is **GitHub Pages**:
+El sitio ya está publicado con **GitHub Pages**, en la rama `main`, carpeta
+`/ (root)`:
 
-1. In this repository, go to **Settings → Pages**.
-2. Under *Build and deployment*, set **Source** to *Deploy from a branch*.
-3. Pick the branch and the `/ (root)` folder, then **Save**.
-4. A minute later the site is live at
-   `https://jafethmartinez.github.io/yurumei-restuarant/`.
+**https://jafethmartinez.github.io/Yurumei-restuarant/**
 
-To use a custom domain (say `yurumei.com`), add a file called `CNAME` at the top
-level containing just the domain, then point the domain's DNS at GitHub Pages.
-If you do, also swap the domain inside `sitemap.xml` and `robots.txt` — they name
-the github.io address today.
+Cada vez que se suba un cambio a `main`, GitHub lo vuelve a publicar solo, en un
+par de minutos.
 
-The `.nojekyll` file is already here — it stops GitHub from trying to process the
-site as a blog.
+Para usar un dominio propio (por ejemplo `yurumei.com`): crea un archivo llamado
+`CNAME` en la raíz con solo el dominio adentro, y apunta el DNS del dominio a
+GitHub Pages. Si lo haces, cambia también el dominio dentro de `sitemap.xml` y
+`robots.txt`, que hoy nombran la dirección de github.io.
+
+El archivo `.nojekyll` ya está puesto — evita que GitHub trate el sitio como un
+blog.
 
 ---
 
-## How it is built
+## Cómo está armado
 
-| Path | What it does |
+| Ruta | Para qué sirve |
 |---|---|
-| `assets/js/data.js` | **All the content.** The only file you need to edit. |
-| `assets/js/app.js`  | Renders the header, footer, menu, hours, map, gallery and form from the data. You should not need to change this. |
-| `assets/css/site.css` | The look. Palette taken from the Garífuna flag — black, white, yellow — with the sea and the terracotta floor of the dining room. |
-| `assets/img/`, `assets/video/` | Photography and video from the village and the restaurant. |
+| `assets/js/data.js` | **Todo el contenido, en los dos idiomas.** El único archivo que necesitas editar. |
+| `assets/js/app.js`  | Dibuja el encabezado, el pie, el menú, el horario, el mapa, la galería y el formulario a partir de los datos, y maneja el cambio de idioma. No deberías tener que tocarlo. |
+| `assets/css/site.css` | La apariencia. Los colores salen de la bandera garífuna — negro, blanco y amarillo — con el mar y el piso de barro del comedor. |
+| `assets/img/`, `assets/video/` | Fotos y videos del pueblo y del restaurante. |
+| `sitemap.xml`, `robots.txt` | Para que los buscadores encuentren las páginas. |
 
-The header and footer are injected by `app.js` on every page, so a change to the
-navigation or the footer happens in one place, not six.
+El encabezado y el pie se generan desde `app.js` en todas las páginas, así que un
+cambio en la navegación se hace en un solo lugar y no en seis.
 
-The table request form does not need a server: it opens WhatsApp or the visitor's
-email app with the message already written, and they press send. Nothing is
-submitted anywhere until they do.
+El formulario de mesas no necesita servidor: abre WhatsApp o el correo del
+visitante con el mensaje ya escrito, y esa persona lo envía. No se manda nada
+hasta que ella aprieta enviar.
+
+---
+
+## In English
+
+This is the website for a family Garífuna restaurant in Punta Gorda, Roatán.
+It is a plain static site — no build step, no dependencies. It loads in Spanish
+and visitors can switch to English with the header button; the choice is
+remembered.
+
+All content lives in `assets/js/data.js`, where every string carries both
+languages as `{ es: "…", en: "…" }`. Fixed page text carries its English in a
+`data-en` attribute on the element. Menu prices are placeholders until
+`PRICES_CONFIRMED` is set to `true` — until then the site shows "ask for today's
+price" rather than a number nobody confirmed.
